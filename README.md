@@ -10,8 +10,7 @@
   - [Summary](#summary)
   - [Contributing](#contributing)
   - [Code of Conduct](#code-of-conduct)
-  - [Changes](#changes)
-    - [Usage](#usage)
+  - [Usage](#usage)
   - [Author](#author)
 
 ### Badges
@@ -34,22 +33,38 @@
 
 - [Code of Conduct](https://github.com/p6m7g8/.github/blob/master/CODE_OF_CONDUCT.md)
 
-## Changes
-
-- [Change Log](CHANGELOG.md)
-
 ## Usage
+
+
+### Aliases
+
+
+### Functions
 
 ### p6df-proxy:
 
 #### p6df-proxy/init.zsh:
 
+- p6df::modules:::proxy::init(_module, dir)
 - p6df::modules::proxy::deps()
-- p6df::modules::proxy::off()
 - str str = p6df::modules::proxy::prompt::line()
 
 
+### p6df-proxy/lib:
 
+#### p6df-proxy/lib/util.sh:
+
+- p6df::modules::proxy::util::off()
+
+
+
+## Hier
+```text
+.
+└── util.sh
+
+1 directory, 1 file
+```
 ## Author
 
 Philip M . Gollucci <pgollucci@p6m7g8.com>
