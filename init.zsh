@@ -15,6 +15,26 @@ p6df::modules::proxy::deps() {
 ######################################################################
 #<
 #
+# Function: p6df::modules:::proxy::init(_module, dir)
+#
+#  Args:
+#	_module -
+#	dir -
+#
+#>
+######################################################################
+p6df::modules:::proxy::init() {
+  local _module="$1"
+  local dir="$2"
+
+  p6_bootstrap "$dir"
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
 # Function: str str = p6df::modules::proxy::prompt::line()
 #
 #  Returns:
@@ -25,9 +45,9 @@ p6df::modules::proxy::deps() {
 ######################################################################
 p6df::modules::proxy::prompt::line() {
 
-  local pair
   local str
-  for pair in $(p6_env_list | p6_filter_select "_PROXY="); do
+  local pair
+  for pair in $(p6_env_list | grep _PROXY=); do
     if p6_string_blank "$str"; then
       str="proxy:\t  $pair"
     else
@@ -35,28 +55,5 @@ p6df::modules::proxy::prompt::line() {
     fi
   done
 
-  if ! p6_string_blank "$str"; then
-    p6_return_str "$str"
-  else
-    p6_return_void
-  fi
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::proxy::off()
-#
-#>
-######################################################################
-p6df::modules::proxy::off() {
-
-  local ev
-  for ev in $(p6_env_list | grep -i proxy=); do
-    local e=$(p6_echo $ev | cut -f 1 -d =)
-    p6_echo $e
-    unset $e
-  done
-
-  p6_return_void
+  p6_return_str "$str"
 }
