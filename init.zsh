@@ -35,7 +35,7 @@ p6df::modules:::proxy::init() {
 ######################################################################
 #<
 #
-# Function: str str = p6df::modules::proxy::prompt::line()
+# Function: str str = p6df::modules::proxy::prompt::mod()
 #
 #  Returns:
 #	str - str
@@ -43,7 +43,7 @@ p6df::modules:::proxy::init() {
 #  Environment:	 P6_NL _PROXY
 #>
 ######################################################################
-p6df::modules::proxy::prompt::line() {
+p6df::modules::proxy::prompt::mod() {
 
   local str
   local pair
