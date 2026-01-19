@@ -40,7 +40,7 @@ p6df::modules:::proxy::init() {
 #  Returns:
 #	str - str
 #
-#  Environment:	 P6_NL _PROXY
+#  Environment:	 P6_NL
 #>
 ######################################################################
 p6df::modules::proxy::prompt::mod() {
