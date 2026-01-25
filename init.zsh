@@ -47,7 +47,7 @@ p6df::modules::proxy::prompt::mod() {
 
   local str
   local pair
-  for pair in $(p6_env_list | grep _PROXY=); do
+  for pair in $(p6_env_list | p6_filter_row_select _PROXY=); do
     if p6_string_blank "$str"; then
       str="proxy:\t  $pair"
     else
