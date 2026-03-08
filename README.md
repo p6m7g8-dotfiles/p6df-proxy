@@ -37,8 +37,8 @@ TODO: Add a short summary of this module.
 
 - `p6df::modules:::proxy::init(_module, dir)`
   - Args:
-    - _module - 
-    - dir - 
+    - _module -
+    - dir -
 - `p6df::modules::proxy::deps()`
 - `str str = p6df::modules::proxy::prompt::mod()`
 
