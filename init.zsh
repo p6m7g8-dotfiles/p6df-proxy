@@ -15,27 +15,7 @@ p6df::modules::proxy::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules:::proxy::init(_module, dir)
-#
-#  Args:
-#	_module -
-#	dir -
-#
-#>
-######################################################################
-p6df::modules:::proxy::init() {
-  local _module="$1"
-  local dir="$2"
-
-  p6_bootstrap "$dir"
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: str str = p6df::modules::proxy::prompt::mod()
+# Function: str str = p6df::modules::proxy::prompt::context()
 #
 #  Returns:
 #	str - str
@@ -43,7 +23,7 @@ p6df::modules:::proxy::init() {
 #  Environment:	 P6_NL
 #>
 ######################################################################
-p6df::modules::proxy::prompt::mod() {
+p6df::modules::proxy::prompt::context() {
 
   local str
   local pair
